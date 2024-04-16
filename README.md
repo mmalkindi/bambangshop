@@ -70,7 +70,7 @@ You can install Postman via this website: <https://www.postman.com/downloads/>
   - [x] Commit: `Implement subscribe function in Notification controller.`
   - [x] Commit: `Implement unsubscribe function in Notification service.`
   - [x] Commit: `Implement unsubscribe function in Notification controller.`
-  - [ ] Write answers of your learning module's "Reflection Publisher-2" questions in this README.
+  - [x] Write answers of your learning module's "Reflection Publisher-2" questions in this README.
 - **STAGE 3: Implement notification mechanism**
   - [ ] Commit: `Implement update method in Subscriber model to send notification HTTP requests.`
   - [ ] Commit: `Implement notify function in Notification service to notify each Subscriber.`
@@ -112,17 +112,22 @@ dan Singleton pattern diimplementasikan dengan memastikan `SUBSCRIBERS` hanya ad
 Q: In the Model-View Controller (MVC) compound pattern, there is no "Service" and "Repository". Model in MVC covers both data storage and business logic.
 Explain based on your understanding of design principles, why we need to separate "Service" and "Repository" from a Model?
 
-A: ...
+A: Kita memisah Model menjadi Service dan Repository untuk menerapkan prinsip **Single Responsbility Principle** (SRP) dari SOLID Principles.
+Service akan mengcover *business logic*, sementara Repository menghandle *data storage*.
+Pemisahan ini akan membuat kode program menjadi lebih mudah untuk dipahami, diuji (testing), dan dipelihara (maintenance).
 
 Q: What happens if we only use the Model?
 Explain your imagination on how the interactions between each model (`Program`, `Subscriber`, `Notification`) affect the code complexity for each model?
 
-A: ...
+A: Apabila kita hanya menggunakan Model, interaksi antara tiap model masih dapat berjalan namun kompleksitas kode akan meningkat.
+Kode untuk tiap Model akan memiliki terlalu banyak fungsionalitas, sehingga akan lebih sulit untuk dipahami dan dipelihara.
 
 Q: Have you explored more about **Postman**? Tell us how this tool helps you to test your current work.
 You might want to also list which features in Postman you are interested in or feel like it is helpful to help your Group Project
 or any of your future software engineering projects.
 
-A: ...
+A: Postman adalah salah satu *tool* yang saya pakai untuk menguji *endpoint* yang telah diimplementasikan di aplikasi ini.
+Selain fitur utama akses *endpoint*, saya rasa fitur *Collections* akan sangat membantu saya untuk membuat suatu set uji coba *endpoint* dan membaginya dengan
+developer lainnya.
 
 #### Reflection Publisher-3
