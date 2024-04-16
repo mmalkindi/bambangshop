@@ -109,4 +109,20 @@ dan Singleton pattern diimplementasikan dengan memastikan `SUBSCRIBERS` hanya ad
 
 #### Reflection Publisher-2
 
+Q: In the Model-View Controller (MVC) compound pattern, there is no "Service" and "Repository". Model in MVC covers both data storage and business logic.
+Explain based on your understanding of design principles, why we need to separate "Service" and "Repository" from a Model?
+
+A: ...
+
+Q: What happens if we only use the Model?
+Explain your imagination on how the interactions between each model (`Program`, `Subscriber`, `Notification`) affect the code complexity for each model?
+
+A: ...
+
+Q: Have you explored more about **Postman**? Tell us how this tool helps you to test your current work.
+You might want to also list which features in Postman you are interested in or feel like it is helpful to help your Group Project
+or any of your future software engineering projects.
+
+A: ...
+
 #### Reflection Publisher-3
