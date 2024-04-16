@@ -76,7 +76,7 @@ You can install Postman via this website: <https://www.postman.com/downloads/>
   - [x] Commit: `Implement notify function in Notification service to notify each Subscriber.`
   - [x] Commit: `Implement publish function in Program service and Program controller.`
   - [x] Commit: `Edit Product service methods to call notify after create/delete.`
-  - [ ] Write answers of your learning module's "Reflection Publisher-3" questions in this README.
+  - [x] Write answers of your learning module's "Reflection Publisher-3" questions in this README.
 
 ## Your Reflections
 
@@ -135,13 +135,17 @@ developer lainnya.
 Q: Observer Pattern has two variations: **Push model** (publisher pushes data to subscribers) **Pull model** (subscribers pull data from publisher).
 In this tutorial case, which variation of Observer Pattern that we use?
 
-A: ...
+A: Di tutorial ini, kita menggunakan Observer Pattern variasi **Push model**.
+Setiap kali terjadi proses `create`, `delete`, dan `publish` di `ProductService`, `Subscriber` akan diberitahu (*notify*) oleh `NotificationService`.
 
 Q: What are the advantages and disadvantages of using the other variation of Observer Pattern for this tutorial case?
 (example: if you answer Q1 with Push, then imagine if we used Pull)
 
-A: ...
+A: Apabila kita menggunakan variasi **Pull model** dari Observer Pattern, maka `Subscriber` akan harus aktif meminta data terbaru dari `NotificationService`.
+Keuntungan dari variasi ini, `Subscriber` dapat meminta data dari Publisher kapan saja.
+Namun, `Subscriber` akan harus memeriksa data cukup sering apabila ingin mendapatkan notifikasi secara *real-time* sehingga menimbulkan *overhead*.
 
 Q: Explain what will happen to the program if we decide to not use multi-threading in the notification process.
 
-A: ...
+A: Tanpa *multi-threading*, proses notifikasi berpotensial bermasalah karena diproses satu per satu secara berurutan / tidak paralel.
+Apabila ada suatu proses yang terhambat karena *error* atau faktor lainnya, proses-proses selanjutnya harus mengantri sehingga terjadi *delay*.
