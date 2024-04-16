@@ -131,3 +131,17 @@ Selain fitur utama akses *endpoint*, saya rasa fitur *Collections* akan sangat m
 developer lainnya.
 
 #### Reflection Publisher-3
+
+Q: Observer Pattern has two variations: **Push model** (publisher pushes data to subscribers) **Pull model** (subscribers pull data from publisher).
+In this tutorial case, which variation of Observer Pattern that we use?
+
+A: ...
+
+Q: What are the advantages and disadvantages of using the other variation of Observer Pattern for this tutorial case?
+(example: if you answer Q1 with Push, then imagine if we used Pull)
+
+A: ...
+
+Q: Explain what will happen to the program if we decide to not use multi-threading in the notification process.
+
+A: ...
