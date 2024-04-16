@@ -63,7 +63,7 @@ You can install Postman via this website: <https://www.postman.com/downloads/>
   - [x] Commit: `Implement add function in Subscriber repository.`
   - [x] Commit: `Implement list_all function in Subscriber repository.`
   - [x] Commit: `Implement delete function in Subscriber repository.`
-  - [ ] Write answers of your learning module's "Reflection Publisher-1" questions in this README.
+  - [x] Write answers of your learning module's "Reflection Publisher-1" questions in this README.
 - **STAGE 2: Implement services and controllers**
   - [ ] Commit: `Create Notification service struct skeleton.`
   - [ ] Commit: `Implement subscribe function in Notification service.`
@@ -90,19 +90,22 @@ Q: In the Observer pattern diagram explained by the Head First Design Pattern bo
 Explain based on your understanding of Observer design patterns, do we still need an interface (or `trait` in Rust)
 in this BambangShop case, or a single Model `struct` is enough?
 
-A: ...
+A: Tidak diperlukan interface/`trait`, karena `struct` Subscriber sudah menjadi implementasi Observer model yang akan digunakan untuk semua use-case.
 
 Q: `id` in Program and `url` in `Subscriber` is intended to be unique.
 Explain based on your understanding, is using `Vec` (list) sufficient or using `DashMap` (map/dictionary)
 like we currently use is necessary for this case?
 
-A: ...
+A: Walaupun bisa saja menggunakan `Vec` untuk menyimpan `id` dan `url`, akan lebih efisien menggunakan `DashMap` karena `id` dan `url` bisa dijadikan key-value pair,
+sehingga hanya perlu 1 `DashMap` dibandingkan 2 `Vec` (satu untuk menyimpan `id` dan satu lainnya untuk menyimpan `url`).
 
 Q: When programming using Rust, we are enforced by rigorous compiler constraints to make a thread-safe program.
 In the case of the List of Subscribers (`SUBSCRIBERS`) static variable, we used the `DashMap` external library for **thread safe HashMap**.
 Explain based on your understanding of design patterns, do we still need `DashMap` or we can implement Singleton pattern instead?
 
-A: ...
+A: Penggunaan `DashMap` dan implementasi Singleton pattern bisa keduanya dilakukan bersamaan.
+`DashMap` masih diperlukan karena memberikan implementasi HashMap yang *thread-safe* di multithreading,
+dan Singleton pattern diimplementasikan dengan memastikan `SUBSCRIBERS` hanya ada satu dan dapat diakses oleh banyak *thread*.
 
 #### Reflection Publisher-2
 
